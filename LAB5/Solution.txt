@@ -1,0 +1,7 @@
+How many films are being filmed with Shooting Permit?  
+	
+	Dataset:Film Permits from NYC.gov 
+	
+	Answer:	tail -n +2 Film_Permits.csv | cut -f2 -d',' | grep -a "Shooting Permit" | wc -l
+	
+	Output:	59381
