@@ -1,0 +1,6 @@
+ls
+head -1 Film_Permits.csv
+tail -n +2 Film_Permits.csv | cut -f2 -d',' | head -5
+tail -n +2 Film_Permits.csv | cut -f2 -d',' | grep -a "Shooting Permit" | head -5
+tail -n +2 Film_Permits.csv | cut -f2 -d',' | grep -a "Shooting Permit" | head -5 | wc -l
+tail -n +2 Film_Permits.csv | cut -f2 -d',' | grep -a "Shooting Permit" | wc -l
