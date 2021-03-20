@@ -1,0 +1,244 @@
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/lab6 (master)
+$ git init
+Initialized empty Git repository in C:/Users/saqla/OneDrive/Desktop/lab6/.git/
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/lab6 (master)
+$ ls
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/lab6 (master)
+$ ls -a
+./  ../  .git/
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/lab6 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/lab6 (master)
+$ cd ..
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop (master)
+$ mkdir Repo1
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop (master)
+$ cd Repo1
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ git init
+Initialized empty Git repository in C:/Users/saqla/OneDrive/Desktop/Repo1/.git/
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ ls
+helloworld.java.txt
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ ls
+helloworld.txt
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ cat helloworld.txt
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        helloworld.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ git add helloworld.txt
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   helloworld.txt
+
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ git commit -m "Creating the Repo1 repository with a text file to be tracked"
+[master (root-commit) 380487b] Creating the Repo1 repository with a text file to
+ be tracked
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 helloworld.txt
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ git log
+commit 380487b1ef788c9de2fb032c88b1c1e9c44d9002 (HEAD -> master)
+Author: Saqlain Mahin <saqlainmahin8093@gmail.com>
+Date:   Fri Mar 19 23:32:18 2021 -0400
+
+    Creating the Repo1 repository with a text file to be tracked
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   helloworld.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ git add helloworld.txt
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ git commit -m "This commit is tracking the changes made within the helloworld text file"
+[master 8ec3228] This commit is tracking the changes made within the helloworld
+text file
+ 1 file changed, 1 insertion(+)
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ git log
+commit 8ec322851fb3b3fbd73373b4f0844d08f7b58ef0 (HEAD -> master)
+Author: Saqlain Mahin <saqlainmahin8093@gmail.com>
+Date:   Fri Mar 19 23:35:53 2021 -0400
+
+    This commit is tracking the changes made within the helloworld text file
+
+commit 380487b1ef788c9de2fb032c88b1c1e9c44d9002
+Author: Saqlain Mahin <saqlainmahin8093@gmail.com>
+Date:   Fri Mar 19 23:32:18 2021 -0400
+
+    Creating the Repo1 repository with a text file to be tracked
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ mkdir RepoMeta
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1 (master)
+$ cd RepoMeta
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1/RepoMeta (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1/RepoMeta (master)
+$ git add logFile
+fatal: pathspec 'logFile' did not match any files
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1/RepoMeta (master)
+$ git add LogFile
+fatal: pathspec 'LogFile' did not match any files
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1/RepoMeta (master)
+$ ls
+LogFile.txt
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1/RepoMeta (master)
+$ git add LogFile.txt
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1/RepoMeta (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   LogFile.txt
+
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1/RepoMeta (master)
+$ git commit -m "adding the log file to RepoMeta folder"
+[master c0ed2d2] adding the log file to RepoMeta folder
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 RepoMeta/LogFile.txt
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1/RepoMeta (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1/RepoMeta (master)
+$ git log
+commit c0ed2d289c5f146fcfd6e06bcaf9b308c8e99d19 (HEAD -> master)
+Author: Saqlain Mahin <saqlainmahin8093@gmail.com>
+Date:   Fri Mar 19 23:44:38 2021 -0400
+
+    adding the log file to RepoMeta folder
+
+commit 8ec322851fb3b3fbd73373b4f0844d08f7b58ef0
+Author: Saqlain Mahin <saqlainmahin8093@gmail.com>
+Date:   Fri Mar 19 23:35:53 2021 -0400
+
+    This commit is tracking the changes made within the helloworld text file
+
+commit 380487b1ef788c9de2fb032c88b1c1e9c44d9002
+Author: Saqlain Mahin <saqlainmahin8093@gmail.com>
+Date:   Fri Mar 19 23:32:18 2021 -0400
+
+    Creating the Repo1 repository with a text file to be tracked
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1/RepoMeta (master)
+$ ^C
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1/RepoMeta (master)
+$ git add LogFile.txt
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1/RepoMeta (master)
+$ git commit -m "This is the final commit which is tracking the logs made using the command line"
+[master fd2ebb8] This is the final commit which is tracking the logs made using
+the command line
+ 1 file changed, 199 insertions(+)
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1/RepoMeta (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1/RepoMeta (master)
+$ git log
+commit fd2ebb8c075e0f1d4342ba8c0542f520c261f8f7 (HEAD -> master)
+Author: Saqlain Mahin <saqlainmahin8093@gmail.com>
+Date:   Fri Mar 19 23:47:01 2021 -0400
+
+    This is the final commit which is tracking the logs made using the command l
+ine
+
+commit c0ed2d289c5f146fcfd6e06bcaf9b308c8e99d19
+Author: Saqlain Mahin <saqlainmahin8093@gmail.com>
+Date:   Fri Mar 19 23:44:38 2021 -0400
+
+    adding the log file to RepoMeta folder
+
+commit 8ec322851fb3b3fbd73373b4f0844d08f7b58ef0
+Author: Saqlain Mahin <saqlainmahin8093@gmail.com>
+Date:   Fri Mar 19 23:35:53 2021 -0400
+
+    This commit is tracking the changes made within the helloworld text file
+
+commit 380487b1ef788c9de2fb032c88b1c1e9c44d9002
+Author: Saqlain Mahin <saqlainmahin8093@gmail.com>
+Date:   Fri Mar 19 23:32:18 2021 -0400
+
+    Creating the Repo1 repository with a text file to be tracked
+
+saqla@LAPTOP-QS15OBUA MINGW64 ~/OneDrive/Desktop/Repo1/RepoMeta (master)
+$ git ||
+>
