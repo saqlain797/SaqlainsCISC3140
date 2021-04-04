@@ -1,0 +1,65 @@
+; Saqlain Mahin
+; <------------------------------     GPA CALCULATOR in Scheme    ------------------------------>
+
+; Function ->  GPA-Calculator
+; Inputs -> Grades (A list of grades), Credits (A list of Credits corresponding to the grades)
+; Output -> Grade Point Average (in float) 
+; Working -> It uses the helper functions to get Score of the student. The score is sum of [Grade*Credit] for all courses.
+;            It also uses the sum function to get the sum of all credits. Now, the GPA is calculated using the formula: GPA = Score/Credits.    
+(define (GPA-Calculator Grades Credits)
+(define Score (gpa-helper Grades Credits))
+(define totalCredits (sum Credits))
+(/ Score totalCredits))
+
+; Function ->  get-score
+; Inputs -> Grade (string)
+; Output -> Score os the Grade (float) 
+; Working -> The function checks if Grade given is one of the valid grades and returns the score corresponding to the grade, otherwise returns a 0.
+(define (get-score Grade)
+(cond
+((eq? Grade "A+") 4.3)
+((eq? Grade "A ") 4.0)
+((eq? Grade "A-") 3.7)
+((eq? Grade "B+") 3.3)
+((eq? Grade "B ") 3.0)
+((eq? Grade "B-") 2.7)
+((eq? Grade "C+") 2.3)
+((eq? Grade "C ") 2.0)
+((eq? Grade "C-") 1.7)
+((eq? Grade "D+") 1.3)
+((eq? Grade "D ") 1.0)
+((eq? Grade "D-") 0.7)
+(else 0)))
+
+; Function ->  gpa-helper
+; Inputs -> Grades (A list of grades), Credits (A list of Credits corresponding to the grades)
+; Output -> Score (in float) 
+; Working -> This function multiplies the corresponding grade with it's credit and returns the sum of all multiplications.
+(define (gpa-helper Grades Credits)
+(cond
+((null? Grades) 0)
+(else (+ (* (get-score (car Grades)) (car Credits)) (gpa-helper (cdr Grades) (cdr Credits))))))
+
+
+; Function ->  sum
+; Inputs -> List (A list of numbers)
+; Output -> Sum of all numbers of the given List 
+; Working -> This function calculates the sum of all elements of the given List.
+(define (sum List)
+(cond
+((null? List) 0)
+(else (+ (car List) (sum (cdr List))))))
+
+
+
+; TESTING
+; In this example we have two courses, the student scores A- in the course with 10 credits and A+ in the course with 20 credits.
+(GPA-Calculator '("A-" "A+") '(10 20)) ; --> 4.1
+
+; In this example we have four courses: 
+; Course    Grade    Credits.
+; 1         B+       10
+; 2         A-       10                     
+; 3         C+       15                     
+; 4         A+       13                     
+(GPA-Calculator '("B+" "A-" "C+" "A+") '(10 10 15 13)) ; --> 3.341666666666667
