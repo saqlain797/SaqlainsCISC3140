@@ -1,0 +1,25 @@
+/*
+Increasing the font-size for more visibility
+*/
+p {
+    font-size: 20px;
+}
+/*
+Aligning the input box and text to center of the page to improve the visibility
+*/
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+/*
+Adding border to the input field
+*/
+#input1 {
+    border: 1px solid;
+}
+/*
+Adding color to the error output
+*/
+#err {
+    color: red;
+}

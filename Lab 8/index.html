@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- title of the web page -->
+        <title>Mask Phone number</title>
+        <!-- Linking the css style sheet -->
+        <link rel="stylesheet" href="styles.css" />
+        <!-- Linking the external java script file -->
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <p>Type in a phone number here, only numbers (10 digits)</p>
+            <!-- input text field to limit to 10 digits and call a function on keyup event -->
+            <input
+                id="input1"
+                type="text"
+                maxlength="10"
+                onKeyUp="myFunction1(this.value)"
+            />
+            <p>Input changes to the format of xxx-xxx-xxxx</p>
+            <p>Masked Phone number:</p>
+            <!-- output will be updated here by javascript -->
+            <p id="output"></p>
+            <!-- error will be updated here by javascript -->
+            <p id="err"></p>
+        </div>
+    </body>
+</html>
