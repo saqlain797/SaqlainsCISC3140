@@ -1,0 +1,14 @@
+Mask Phone Number
+Description of the Problem:
+Entered phone number needs to be formatted according to the mask: xxx-xxx-xxxx. 
+If the user entered the phone number as xxxxxxxxxx, it needs to be displayed as xxx-xxx-xxxx below. 
+It should not take any further input after 10 digits and also, it should not take anything other than numbers as input.
+
+Solution to the Problem:
+The solution for the problem is based on the length of the number entered and slicing it.
+Events are listened by using onKeyUp() method and all the javascript code is present in an external index.js file.
+The output will be displayed as the Masked number below the input field.
+If any user enters anything other than number, error is shown by changing the text of an empty <p> tag. Input is validated by using isNaN() method.
+When the entered number length is less than 3, no masking is required. If it is greater than 3, “-” is added after the 3rd digit. If the length is more than 6, “-” will be added after the 6th digit as well.
+Input is masked by creating an array of strings with variable name phone which has substrings of the input number. As the first substring, it will have first three characters of the input number, then “-“, then next 3 characters, then “-“ again and then the rest of the characters. This string created will be joined using join() method to make a single string and will be updated as the output.
+Input length is limited to 10 by using the maxLength attribute in the input html tag.
